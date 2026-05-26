@@ -1,0 +1,2 @@
+# Mining-Space
+FIAP - GLOBAL SOLUTION 2026
