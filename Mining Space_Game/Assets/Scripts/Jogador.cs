@@ -1,4 +1,5 @@
 using System.Collections;
+using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,6 +17,8 @@ public class Jogador : MonoBehaviour
     bool isAndando;
 
     [SerializeField] bool isAtirou;
+
+    public bool isLaser;
 
     Animator animatorPlayer;
 
@@ -56,7 +59,16 @@ public class Jogador : MonoBehaviour
             StartCoroutine("delayAtirar");
         }
 
-        print(isAtirou);
+        if (Input.GetButton("Fire2"))
+        {
+            _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = true;
+            isLaser = true;
+        }
+        else
+        {
+            _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = false;
+            isLaser = false;
+        }
     }
 
     void FixedUpdate()

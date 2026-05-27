@@ -13,9 +13,15 @@ public class GameController : MonoBehaviour
 
     public GameObject balaPrefabs;
 
+    public GameObject laserObject;
+
     public float velBalaPlayer;
 
     public float tempoDelayBala;
+
+    [Header("Gameplay configs")]
+
+    public LayerMask layers;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
