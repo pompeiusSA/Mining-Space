@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -10,7 +11,15 @@ public class Jogador : MonoBehaviour
 
     float velZ, velY;
 
+    int velYInt;
+
     bool isAndando;
+
+    [SerializeField] bool isAtirou;
+
+    Animator animatorPlayer;
+
+    public Transform posAtirarPlayer;
 
     void Awake()
     {
@@ -21,6 +30,10 @@ public class Jogador : MonoBehaviour
         //Pegando o Rigidbody2D do player
 
         rbPlayer = GetComponent<Rigidbody2D>();
+
+        //Pegando o animator do player
+
+        animatorPlayer = GetComponent<Animator>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +44,35 @@ public class Jogador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pegandoInput();
+
+        if (Input.GetButton("Fire1") && isAtirou == false)
+        {
+            isAtirou = true;
+
+            GameObject tempBala = Instantiate(_gameController.balaPrefabs, posAtirarPlayer.position, transform.localRotation);
+            tempBala.GetComponent<Rigidbody2D>().linearVelocity = tempBala.transform.up * _gameController.velBalaPlayer;
+
+            StartCoroutine("delayAtirar");
+        }
+
+        print(isAtirou);
+    }
+
+    void FixedUpdate()
+    {
+        movimentacaoPlayer();
+    }
+
+    void LateUpdate()
+    {
+        //Ativando a animação conforme a condição do animator 
+
+        animatorPlayer.SetInteger("velPlayer", velYInt);
+    }
+
+    private void pegandoInput()
+    {
         //Pegando o input
 
         velZ = Input.GetAxis("Horizontal") * -1;
@@ -38,11 +80,15 @@ public class Jogador : MonoBehaviour
         velY = Input.GetAxis("Vertical");
 
         isAndando = Input.GetButton("Vertical");
-    }
 
-    void FixedUpdate()
-    {
-        movimentacaoPlayer();
+        if (velY > 0)
+        {
+            velYInt = 1;
+        }
+        else
+        {
+            velYInt = 0;
+        }
     }
 
     private void movimentacaoPlayer()
@@ -64,5 +110,12 @@ public class Jogador : MonoBehaviour
 
             rbPlayer.linearVelocity = new Vector3(freioX, freioY, 0f);
         }
+    }
+
+    IEnumerator delayAtirar()
+    {
+        yield return new WaitForSeconds(_gameController.tempoDelayBala);
+
+        isAtirou = false;
     }
 }

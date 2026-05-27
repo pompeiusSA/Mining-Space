@@ -10,6 +10,13 @@ public class GameController : MonoBehaviour
     public float velPlayerRotacao;
 
     public float delayRePlayer;
+
+    public GameObject balaPrefabs;
+
+    public float velBalaPlayer;
+
+    public float tempoDelayBala;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
