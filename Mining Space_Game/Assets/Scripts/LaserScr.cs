@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class LaserScr : MonoBehaviour
@@ -7,6 +9,8 @@ public class LaserScr : MonoBehaviour
     GameController _gameController;
 
     private SpriteRenderer sr;
+
+    public bool isShakeMeteoro = false;
 
     void Awake()
     {
@@ -40,6 +44,14 @@ public class LaserScr : MonoBehaviour
             _gameController.vidaMeteoro -= _gameController.danoLaserMeteoro * Time.deltaTime;
 
             hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp(hit.collider.GetComponent<SpriteRenderer>().color, _gameController.corFinalMeteoro, _gameController.vidaMeteoro / 10000);
+
+            isShakeMeteoro = true;
         }
+        else
+        {
+            isShakeMeteoro = false;
+        }
+
+        print(isShakeMeteoro);
     }
 }

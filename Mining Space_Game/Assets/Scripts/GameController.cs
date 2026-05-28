@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour
 
     public LayerMask layerMeteoro;
 
+    public float duracaoShake;
+
     [Header("Meteoro Inativo")]
 
     public float vidaMeteoro;
