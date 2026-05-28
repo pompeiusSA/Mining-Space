@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -25,9 +26,17 @@ public class GameController : MonoBehaviour
 
     public float duracaoShake;
 
+    public float recursosQtd = 200f;
+
+    public float recursosColhidos;
+
+    [Header("UI")]
+
+    public Text recursosQtdText;
+
     [Header("Meteoro Inativo")]
 
-    public float vidaMeteoro;
+    public float vidaMeteoroMax = 100;
 
     public float danoLaserMeteoro = 0;
 
@@ -43,6 +52,6 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        recursosQtdText.text = ((int)recursosQtd).ToString();
     }
 }

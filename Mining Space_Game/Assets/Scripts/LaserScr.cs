@@ -41,9 +41,13 @@ public class LaserScr : MonoBehaviour
 
         if (hit.collider != null && _jogador.isLaser == true)
         {
-            _gameController.vidaMeteoro -= _gameController.danoLaserMeteoro * Time.deltaTime;
+            MeteoroInativo meteoro = hit.collider.GetComponent<MeteoroInativo>();
 
-            hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp(hit.collider.GetComponent<SpriteRenderer>().color, _gameController.corFinalMeteoro, _gameController.vidaMeteoro / 10000);
+            meteoro.meteoroVida -= _gameController.danoLaserMeteoro * Time.fixedDeltaTime;
+
+            _gameController.recursosQtd += _gameController.recursosColhidos;
+
+            hit.collider.GetComponent<SpriteRenderer>().color = Color.Lerp(hit.collider.GetComponent<SpriteRenderer>().color, _gameController.corFinalMeteoro, meteoro.meteoroVida / 10000);
 
             isShakeMeteoro = true;
         }
@@ -51,7 +55,5 @@ public class LaserScr : MonoBehaviour
         {
             isShakeMeteoro = false;
         }
-
-        print(isShakeMeteoro);
     }
 }

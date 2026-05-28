@@ -9,6 +9,8 @@ public class MeteoroInativo : MonoBehaviour
 
     public AnimationCurve animCurveMeteoro;
 
+    public float meteoroVida;
+
     void Awake()
     {
         _gameController = FindAnyObjectByType(typeof(GameController)) as GameController;
@@ -19,21 +21,24 @@ public class MeteoroInativo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        meteoroVida = _gameController.vidaMeteoroMax;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_laserScr.isShakeMeteoro == true)
+        if (_laserScr.GetComponent<SpriteRenderer>().enabled == true)
         {
-            _laserScr.isShakeMeteoro = false;
-            StartCoroutine(shakeMeteoro());
-        }
+            if (_laserScr.isShakeMeteoro == true)
+            {
+                _laserScr.isShakeMeteoro = false;
+                StartCoroutine(shakeMeteoro());
+            }
 
-        if (_gameController.vidaMeteoro <= 0)
-        {
-            Destroy(this.gameObject);
+            if (meteoroVida <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
