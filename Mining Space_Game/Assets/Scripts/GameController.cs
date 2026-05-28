@@ -21,7 +21,16 @@ public class GameController : MonoBehaviour
 
     [Header("Gameplay configs")]
 
-    public LayerMask layers;
+    public LayerMask layerMeteoro;
+
+    [Header("Meteoro Inativo")]
+
+    public float vidaMeteoro;
+
+    public float danoLaserMeteoro = 0;
+
+    public Color corFinalMeteoro;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
