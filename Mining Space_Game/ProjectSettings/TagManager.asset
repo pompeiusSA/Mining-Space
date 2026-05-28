@@ -44,5 +44,8 @@ TagManager:
   - name: FrenteBG
     uniqueID: 1529811879
     locked: 0
+  - name: HUD
+    uniqueID: 4101563543
+    locked: 0
   m_RenderingLayers:
   - Default

@@ -22,6 +22,8 @@ public class Jogador : MonoBehaviour
 
     Animator animatorPlayer;
 
+
+
     public Transform posAtirarPlayer;
 
     void Awake()
@@ -49,26 +51,7 @@ public class Jogador : MonoBehaviour
     {
         pegandoInput();
 
-        if (Input.GetButton("Fire1") && isAtirou == false)
-        {
-            isAtirou = true;
-
-            GameObject tempBala = Instantiate(_gameController.balaPrefabs, posAtirarPlayer.position, transform.localRotation);
-            tempBala.GetComponent<Rigidbody2D>().linearVelocity = tempBala.transform.up * _gameController.velBalaPlayer;
-
-            StartCoroutine("delayAtirar");
-        }
-
-        if (Input.GetButton("Fire2"))
-        {
-            _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = true;
-            isLaser = true;
-        }
-        else
-        {
-            _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = false;
-            isLaser = false;
-        }
+        atirando();
     }
 
     void FixedUpdate()
@@ -114,6 +97,8 @@ public class Jogador : MonoBehaviour
         if (isAndando)
         {
             rbPlayer.linearVelocity = transform.up * velY * _gameController.velPlayer;
+
+            _gameController.energiaNaveAtual -= _gameController.energiaGasta[0] * Time.fixedDeltaTime;
         }
         else
         {
@@ -129,5 +114,31 @@ public class Jogador : MonoBehaviour
         yield return new WaitForSeconds(_gameController.tempoDelayBala);
 
         isAtirou = false;
+    }
+
+    private void atirando()
+    {
+        if (Input.GetButton("Fire1") && isAtirou == false)
+        {
+            isAtirou = true;
+
+            GameObject tempBala = Instantiate(_gameController.balaPrefabs, posAtirarPlayer.position, transform.localRotation);
+            tempBala.GetComponent<Rigidbody2D>().linearVelocity = tempBala.transform.up * _gameController.velBalaPlayer;
+
+            _gameController.energiaNaveAtual -= _gameController.energiaGasta[1];
+
+            StartCoroutine("delayAtirar");
+        }
+
+        if (Input.GetButton("Fire2"))
+        {
+            _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = true;
+            isLaser = true;
+        }
+        else
+        {
+            _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = false;
+            isLaser = false;
+        }
     }
 }

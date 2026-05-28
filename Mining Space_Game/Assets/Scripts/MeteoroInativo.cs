@@ -11,6 +11,12 @@ public class MeteoroInativo : MonoBehaviour
 
     public float meteoroVida;
 
+    public float qualidadeMeteoro;
+
+    public float recursosColhidos;
+
+    public bool isShakeMeteoro = false;
+
     void Awake()
     {
         _gameController = FindAnyObjectByType(typeof(GameController)) as GameController;
@@ -22,6 +28,21 @@ public class MeteoroInativo : MonoBehaviour
     void Start()
     {
         meteoroVida = _gameController.vidaMeteoroMax;
+
+        qualidadeMeteoro = Random.Range(0, 100);
+
+        if (qualidadeMeteoro >= 85)
+        {
+            recursosColhidos = 1;
+        }
+        else if (qualidadeMeteoro >= 35)
+        {
+            recursosColhidos = 0.1f;
+        }
+        else
+        {
+            recursosColhidos = 0.5f;
+        }
     }
 
     // Update is called once per frame
@@ -29,9 +50,9 @@ public class MeteoroInativo : MonoBehaviour
     {
         if (_laserScr.GetComponent<SpriteRenderer>().enabled == true)
         {
-            if (_laserScr.isShakeMeteoro == true)
+            if (isShakeMeteoro == true)
             {
-                _laserScr.isShakeMeteoro = false;
+                isShakeMeteoro = false;
                 StartCoroutine(shakeMeteoro());
             }
 
@@ -61,6 +82,6 @@ public class MeteoroInativo : MonoBehaviour
 
         transform.position = posicaoInicial;
 
-        _laserScr.isShakeMeteoro = true;
+        isShakeMeteoro = true;
     }
 }

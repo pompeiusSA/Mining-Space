@@ -20,6 +20,10 @@ public class GameController : MonoBehaviour
 
     public float tempoDelayBala;
 
+    public float energiaNaveAtual;
+
+    public float[] energiaGasta;
+
     [Header("Gameplay configs")]
 
     public LayerMask layerMeteoro;
@@ -28,11 +32,11 @@ public class GameController : MonoBehaviour
 
     public float recursosQtd = 200f;
 
-    public float recursosColhidos;
-
     [Header("UI")]
 
     public Text recursosQtdText;
+
+    public Text energiaNaveText;
 
     [Header("Meteoro Inativo")]
 
@@ -42,7 +46,10 @@ public class GameController : MonoBehaviour
 
     public Color corFinalMeteoro;
 
-
+    void Awake()
+    {
+        energiaNaveAtual = recursosQtd / 2;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,5 +60,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         recursosQtdText.text = ((int)recursosQtd).ToString();
+
+        energiaNaveText.text = ((int)energiaNaveAtual).ToString();
     }
 }
