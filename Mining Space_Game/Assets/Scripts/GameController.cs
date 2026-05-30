@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
 
     public float[] energiaGasta;
 
+    public float vidaNave;
+
     [Header("Gameplay configs")]
 
     public LayerMask layerMeteoro;
@@ -31,6 +33,8 @@ public class GameController : MonoBehaviour
     public float duracaoShake;
 
     public float recursosQtd = 200f;
+
+    public GameObject explosaoPrefab;
 
     [Header("UI")]
 

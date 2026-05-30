@@ -22,9 +22,13 @@ public class Jogador : MonoBehaviour
 
     Animator animatorPlayer;
 
-
+    public bool isMorreu = false;
 
     public Transform posAtirarPlayer;
+
+    public Transform[] explosoesPos;
+
+    private bool isMorreuCutsceneAtivado = false;
 
     void Awake()
     {
@@ -52,6 +56,8 @@ public class Jogador : MonoBehaviour
         pegandoInput();
 
         atirando();
+
+        playerMorte();
     }
 
     void FixedUpdate()
@@ -90,11 +96,14 @@ public class Jogador : MonoBehaviour
     {
         //Fazendo o player rotacionar
 
-        transform.Rotate(0, 0, velZ * _gameController.velPlayerRotacao * Time.fixedDeltaTime);
+        if (isMorreu == false)
+        {
+            transform.Rotate(0, 0, velZ * _gameController.velPlayerRotacao * Time.fixedDeltaTime);
+        }
 
         //Player se movimentar
 
-        if (isAndando)
+        if (isAndando && isMorreu == false)
         {
             rbPlayer.linearVelocity = transform.up * velY * _gameController.velPlayer;
 
@@ -118,7 +127,7 @@ public class Jogador : MonoBehaviour
 
     private void atirando()
     {
-        if (Input.GetButton("Fire1") && isAtirou == false)
+        if (Input.GetButton("Fire1") && isAtirou == false && isMorreu == false)
         {
             isAtirou = true;
 
@@ -130,7 +139,7 @@ public class Jogador : MonoBehaviour
             StartCoroutine("delayAtirar");
         }
 
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2") && isMorreu == false)
         {
             _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = true;
             isLaser = true;
@@ -140,5 +149,50 @@ public class Jogador : MonoBehaviour
             _gameController.laserObject.GetComponent<SpriteRenderer>().enabled = false;
             isLaser = false;
         }
+    }
+
+    public void playerMorte()
+    {
+        if (_gameController.energiaNaveAtual <= 0 || _gameController.vidaNave <= 0)
+        {
+            isMorreu = true;
+        }
+
+        if (isMorreu && isMorreuCutsceneAtivado == false)
+        {
+            isMorreuCutsceneAtivado = true;
+            StartCoroutine("playerMorrendoCutscene");
+        }
+    }
+
+    IEnumerator playerMorrendoCutscene()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[0].transform.position, transform.localRotation);
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[2].transform.position, transform.localRotation);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[1].transform.position, transform.localRotation);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[2].transform.position, transform.localRotation);
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[1].transform.position, transform.localRotation);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[1].transform.position, transform.localRotation);
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[0].transform.position, transform.localRotation);
+
+        Instantiate(_gameController.explosaoPrefab, explosoesPos[2].transform.position, transform.localRotation);
+        this.GetComponent<SpriteRenderer>().enabled = false;
+
+        Instantiate(_gameController.explosaoPrefab, transform.position, transform.localRotation);
+
+        yield return new WaitForSeconds(2f);
+
+        Destroy(this.gameObject);
     }
 }

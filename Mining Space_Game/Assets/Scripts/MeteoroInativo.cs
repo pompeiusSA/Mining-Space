@@ -48,17 +48,20 @@ public class MeteoroInativo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_laserScr.GetComponent<SpriteRenderer>().enabled == true)
+        if (_laserScr != null)
         {
-            if (isShakeMeteoro == true)
+            if (_laserScr.GetComponent<SpriteRenderer>().enabled == true)
             {
-                isShakeMeteoro = false;
-                StartCoroutine(shakeMeteoro());
-            }
+                if (isShakeMeteoro == true)
+                {
+                    isShakeMeteoro = false;
+                    StartCoroutine(shakeMeteoro());
+                }
 
-            if (meteoroVida <= 0)
-            {
-                Destroy(this.gameObject);
+                if (meteoroVida <= 0)
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
     }
