@@ -30,6 +30,8 @@ public class Jogador : MonoBehaviour
 
     private bool isMorreuCutsceneAtivado = false;
 
+    public Transform[] limitesMapa;
+
     void Awake()
     {
         //Pegando o script do game controller
@@ -58,6 +60,8 @@ public class Jogador : MonoBehaviour
         atirando();
 
         playerMorte();
+
+        limiteMapaPlayer();
     }
 
     void FixedUpdate()
@@ -194,5 +198,25 @@ public class Jogador : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         Destroy(this.gameObject);
+    }
+
+    void limiteMapaPlayer()
+    {
+        if (transform.position.x >= limitesMapa[0].position.x)
+        {
+            transform.position = new Vector2(limitesMapa[0].position.x, transform.position.y);
+        }
+        else if (transform.position.x <= limitesMapa[1].position.x)
+        {
+            transform.position = new Vector2(limitesMapa[1].position.x, transform.position.y);
+        }
+        else if (transform.position.y <= limitesMapa[2].position.y)
+        {
+            transform.position = new Vector2(transform.position.x, limitesMapa[2].position.y);
+        }
+        else if (transform.position.y >= limitesMapa[3].position.y)
+        {
+            transform.position = new Vector2(transform.position.x, limitesMapa[3].position.y);
+        }
     }
 }

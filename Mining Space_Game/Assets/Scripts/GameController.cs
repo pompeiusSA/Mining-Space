@@ -6,6 +6,12 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum estagiosFase
+{
+    exploracao,
+    sobrevivencia,
+}
+
 public class GameController : MonoBehaviour
 {
     [Header("Player")]
@@ -48,6 +54,8 @@ public class GameController : MonoBehaviour
 
     public Camera camera;
 
+    public estagiosFase faseAtual;
+
     [Header("UI")]
 
     public Text recursosQtdText;
@@ -61,6 +69,12 @@ public class GameController : MonoBehaviour
     public float danoLaserMeteoro = 0;
 
     public Color corFinalMeteoro;
+
+    public GameObject meteoroInativoPrefab;
+
+    public int limiteMaximoCena;
+
+    [SerializeField] int limiteAtualMeteorosInativos = 0;
 
     [Header("Meteoro Ativo")]
 
@@ -81,7 +95,13 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        faseAtual = estagiosFase.exploracao;
 
+        while (limiteAtualMeteorosInativos <= limiteMaximoCena)
+        {
+            Instantiate(meteoroInativoPrefab, new Vector3(Random.Range(-359f, 396f), Random.Range(-192.6f, 251f)), transform.localRotation);
+            limiteAtualMeteorosInativos++;
+        }
     }
 
     // Update is called once per frame
@@ -97,6 +117,8 @@ public class GameController : MonoBehaviour
             {
                 numMeteoroMax = Random.Range(10, 50);
 
+                faseAtual = estagiosFase.exploracao;
+                print("spanwando");
                 StartCoroutine("delaySpawnMeteoros");
             }
         }
@@ -106,7 +128,7 @@ public class GameController : MonoBehaviour
     {
         //Mexendo camera
 
-        if (_player != null)
+        if (_player != null && faseAtual == estagiosFase.exploracao)
         {
             camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
         }
@@ -115,6 +137,8 @@ public class GameController : MonoBehaviour
     IEnumerator delaySpawnMeteoros()
     {
         yield return new WaitForSeconds(Random.Range(tempDelayMeteoroSpawn[0], tempDelayMeteoroSpawn[1]));
+
+        faseAtual = estagiosFase.sobrevivencia;
 
         if (numMeteoroMax > 0)
         {

@@ -360,6 +360,11 @@ MonoBehaviour:
   - {fileID: 4079315193989018624}
   - {fileID: 1509502187087483671}
   - {fileID: 2105389459482259156}
+  limitesMapa:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &2871060684844884543
 Animator:
   serializedVersion: 7
