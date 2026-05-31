@@ -30,6 +30,8 @@ public class GameController : MonoBehaviour
 
     public float vidaNave;
 
+    Jogador _player;
+
     [Header("Gameplay configs")]
 
     public LayerMask layerMeteoro;
@@ -43,6 +45,8 @@ public class GameController : MonoBehaviour
     public float[] tempMeteoroSpawn;
 
     public float[] tempDelayMeteoroSpawn;
+
+    public Camera camera;
 
     [Header("UI")]
 
@@ -71,6 +75,8 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         energiaNaveAtual = recursosQtd / 2;
+
+        _player = FindAnyObjectByType(typeof(Jogador)) as Jogador;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -94,8 +100,16 @@ public class GameController : MonoBehaviour
                 StartCoroutine("delaySpawnMeteoros");
             }
         }
+    }
 
-        print($"numero meteoro: {numMeteoroMax} e existe meteoros? {ExisteMeteoroNaCena()}");
+    void LateUpdate()
+    {
+        //Mexendo camera
+
+        if (_player != null)
+        {
+            camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
+        }
     }
 
     IEnumerator delaySpawnMeteoros()
