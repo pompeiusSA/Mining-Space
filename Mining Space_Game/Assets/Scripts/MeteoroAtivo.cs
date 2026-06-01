@@ -24,7 +24,7 @@ public class MeteoroAtivo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        meteoroVel = Random.Range(50, 100);
+        meteoroVel = Random.Range(100, 150);
 
         ChecandoPlayerVivo();
 
@@ -53,9 +53,9 @@ public class MeteoroAtivo : MonoBehaviour
             {
                 case "balaPlayer":
                     Instantiate(_gameController.explosaoPrefab, transform.position, transform.localRotation);
+                    Instantiate(_gameController.particulasMeteoro, transform.position, transform.localRotation);
                     Destroy(this.gameObject);
                     Destroy(colidido.gameObject);
-                    Instantiate(_gameController.particulasMeteoro, transform.position, transform.localRotation);
                     break;
 
                 case "Player":

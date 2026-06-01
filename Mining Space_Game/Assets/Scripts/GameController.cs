@@ -55,6 +55,8 @@ public class GameController : MonoBehaviour
 
     public Camera camera;
 
+    public Transform[] posicoesSpawnPlayer;
+
     public CameraScr _camera;
 
     public bool isDano = false;
@@ -109,6 +111,16 @@ public class GameController : MonoBehaviour
         _player = FindAnyObjectByType(typeof(Jogador)) as Jogador;
 
         _camera = FindAnyObjectByType(typeof(CameraScr)) as CameraScr;
+
+        //Sorteando local de spawn do player
+
+        Transform posicaoInicialPlayer = posicoesSpawnPlayer[Random.Range(0, posicoesSpawnPlayer.Length)];
+
+        _player.transform.position = posicaoInicialPlayer.position;
+
+        _camera.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, _camera.transform.position.z);
+
+        //while(posicaoFimJogo.position == _player.transform.position || )
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
