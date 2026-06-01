@@ -55,6 +55,10 @@ public class GameController : MonoBehaviour
 
     public Camera camera;
 
+    public CameraScr _camera;
+
+    public bool isDano = false;
+
     public estagiosFase faseAtual;
 
     [Header("UI")]
@@ -62,6 +66,15 @@ public class GameController : MonoBehaviour
     public Text recursosQtdText;
 
     public Text energiaNaveText;
+
+    public Material materialCam;
+
+    public Color corDanoCamera;
+
+    public Color corCamera;
+
+    public GameObject particulasMeteoro;
+    public GameObject particulasMeteoroInativo;
 
     [Header("Meteoro Inativo")]
 
@@ -94,6 +107,8 @@ public class GameController : MonoBehaviour
         energiaNaveAtual = recursosQtd / 2;
 
         _player = FindAnyObjectByType(typeof(Jogador)) as Jogador;
+
+        _camera = FindAnyObjectByType(typeof(CameraScr)) as CameraScr;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -128,7 +143,7 @@ public class GameController : MonoBehaviour
     {
         recursosQtdText.text = ((int)recursosQtd).ToString();
 
-        energiaNaveText.text = ((int)energiaNaveAtual).ToString();
+        energiaNaveText.text = ((int)energiaNaveAtual + "%").ToString();
 
         if (ExisteMeteoroNaCena() == false)
         {
@@ -146,7 +161,7 @@ public class GameController : MonoBehaviour
     {
         //Mexendo camera
 
-        if (_player != null && faseAtual == estagiosFase.exploracao)
+        if (_player != null && faseAtual == estagiosFase.exploracao && _camera.isShakeMeteoro == false)
         {
             camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
         }

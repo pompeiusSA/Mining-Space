@@ -61,6 +61,8 @@ public class MeteoroInativo : MonoBehaviour
                 if (meteoroVida <= 0)
                 {
                     Destroy(this.gameObject);
+
+                    Instantiate(_gameController.particulasMeteoroInativo, transform.position, transform.localRotation);
                 }
             }
         }

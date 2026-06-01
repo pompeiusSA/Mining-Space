@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -511,6 +512,53 @@ Transform:
   - {fileID: 95636626}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85d3193c6c736a4aa7997acd7b1634b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Camera
+  duracaoShake: 1
+  isShakeMeteoro: 0
+  animCurveMeteoro:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0048675537
+      value: 0
+      inSlope: 0.5162843
+      outSlope: 0.5162843
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.24702868
+    - serializedVersion: 3
+      time: 0.4280439
+      value: 0.17179924
+      inSlope: 0.00964821
+      outSlope: 0.00964821
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.30037138
+      outSlope: -0.30037138
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &551511612
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,9 +876,16 @@ MonoBehaviour:
   - 10
   - 10
   camera: {fileID: 519420031}
+  _camera: {fileID: 0}
+  isDano: 0
   faseAtual: 0
   recursosQtdText: {fileID: 1664968294}
   energiaNaveText: {fileID: 1797684122}
+  materialCam: {fileID: 2100000, guid: 66993c3718d4074489637e5b8692c24d, type: 2}
+  corDanoCamera: {r: 1.507883, g: 0.40542132, b: 0.40542132, a: 1}
+  corCamera: {r: 2, g: 2, b: 2, a: 1}
+  particulasMeteoro: {fileID: 124073385288849053, guid: fe038c66f3fd53048a7aba183e492b57, type: 3}
+  particulasMeteoroInativo: {fileID: 124073385288849053, guid: 1ca1a428a0193e84d810f092926f3641, type: 3}
   vidaMeteoroMax: 100
   danoLaserMeteoro: 20
   corFinalMeteoro: {r: 0.8018868, g: 0, b: 0, a: 1}

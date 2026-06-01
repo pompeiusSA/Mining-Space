@@ -55,12 +55,19 @@ public class MeteoroAtivo : MonoBehaviour
                     Instantiate(_gameController.explosaoPrefab, transform.position, transform.localRotation);
                     Destroy(this.gameObject);
                     Destroy(colidido.gameObject);
+                    Instantiate(_gameController.particulasMeteoro, transform.position, transform.localRotation);
                     break;
 
                 case "Player":
                     _gameController.vidaNave -= 10;
 
+                    _gameController.isDano = true;
+
+                    _gameController._camera.isShakeMeteoro = true;
+
                     Instantiate(_gameController.explosaoPrefab, transform.position, transform.localRotation);
+
+                    _gameController._camera.isShakeMeteoro = true;
 
                     Destroy(this.gameObject);
                     break;
