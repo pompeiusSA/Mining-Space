@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
@@ -74,6 +75,8 @@ public class GameController : MonoBehaviour
 
     public int limiteMaximoCena;
 
+    [SerializeField] List<Vector2> posicoesMeteoroInativo = new List<Vector2>();
+
     [SerializeField] int limiteAtualMeteorosInativos = 0;
 
     [Header("Meteoro Ativo")]
@@ -97,10 +100,26 @@ public class GameController : MonoBehaviour
     {
         faseAtual = estagiosFase.exploracao;
 
-        while (limiteAtualMeteorosInativos <= limiteMaximoCena)
+        for (int i = 0; posicoesMeteoroInativo.Count <= limiteMaximoCena; i++)
         {
-            Instantiate(meteoroInativoPrefab, new Vector3(Random.Range(-359f, 396f), Random.Range(-192.6f, 251f)), transform.localRotation);
-            limiteAtualMeteorosInativos++;
+            bool isPode = false;
+
+            while (isPode == false)
+            {
+                Vector2 posNova = new Vector2(Random.Range(-360, 390), Random.Range(-190, 250));
+
+                if (posicoesMeteoroInativo.Contains(posNova))
+                {
+                    posNova = new Vector2(Random.Range(-360, 390), Random.Range(-190, 250));
+                }
+                else
+                {
+                    posicoesMeteoroInativo.Add(posNova);
+                    isPode = true;
+                }
+            }
+
+            Instantiate(meteoroInativoPrefab, posicoesMeteoroInativo[i], transform.localRotation);
         }
     }
 
@@ -118,7 +137,6 @@ public class GameController : MonoBehaviour
                 numMeteoroMax = Random.Range(10, 50);
 
                 faseAtual = estagiosFase.exploracao;
-                print("spanwando");
                 StartCoroutine("delaySpawnMeteoros");
             }
         }

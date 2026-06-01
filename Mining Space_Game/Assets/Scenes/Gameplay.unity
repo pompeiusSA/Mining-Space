@@ -836,6 +836,7 @@ MonoBehaviour:
   corFinalMeteoro: {r: 0.8018868, g: 0, b: 0, a: 1}
   meteoroInativoPrefab: {fileID: 510949573149388184, guid: 0cb3538f10f010146b2a75316cfabe3f, type: 3}
   limiteMaximoCena: 300
+  posicoesMeteoroInativo: []
   limiteAtualMeteorosInativos: 0
   posicoesSpawn:
   - {fileID: 333171363}

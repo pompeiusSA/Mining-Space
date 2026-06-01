@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingOrder: 99
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 835257cd74d0aed498b7ceb4137d4394, type: 3}
-  m_Color: {r: 0.6226415, g: 0.44624427, b: 0.29076183, a: 1}
+  m_Color: {r: 0.5660378, g: 0.54766196, b: 0.5313279, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,4 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d85398beb15134496addcdc1cc0cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Explosao
-  corFinal: {r: 0.62352943, g: 0.44705883, b: 0.2901961, a: 0}
+  corFinal: {r: 0.5647059, g: 0.54901963, b: 0.5294118, a: 0}
