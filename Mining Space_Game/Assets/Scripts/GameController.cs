@@ -4,7 +4,7 @@ using GLTFast.Schema;
 using JetBrains.Annotations;
 using NUnit.Framework;
 using Unity.VisualScripting;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,7 +18,6 @@ public enum estagiosFase
 public class GameController : MonoBehaviour
 {
     [Header("Player")]
-
     public float velPlayer;
 
     public float velPlayerRotacao;
@@ -44,7 +43,6 @@ public class GameController : MonoBehaviour
     public Transform[] limitesCamPlayer;
 
     [Header("Gameplay configs")]
-
     public LayerMask layerMeteoro;
 
     public float duracaoShake;
@@ -74,7 +72,6 @@ public class GameController : MonoBehaviour
     public GameObject meteoroFinal;
 
     [Header("UI")]
-
     public Text recursosQtdText;
 
     public Text energiaNaveText;
@@ -92,7 +89,6 @@ public class GameController : MonoBehaviour
     public GameObject setaMeteoroFinal;
 
     [Header("Meteoro Inativo")]
-
     public float vidaMeteoroMax = 100;
 
     public float danoLaserMeteoro = 0;
@@ -110,7 +106,6 @@ public class GameController : MonoBehaviour
     [SerializeField] int limiteAtualMeteorosInativos = 0;
 
     [Header("Meteoro Ativo")]
-
     public Transform[] posicoesSpawn;
 
     public MeteoroAtivo meteoroAtivoPrefab;
@@ -121,11 +116,12 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        // Guarda referencias de objetos principais da cena.
         _player = FindAnyObjectByType(typeof(Jogador)) as Jogador;
 
         _camera = FindAnyObjectByType(typeof(CameraScr)) as CameraScr;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         faseAtual = estagiosFase.exploracao;
@@ -141,7 +137,6 @@ public class GameController : MonoBehaviour
         instanciandoObjetos();
     }
 
-    // Update is called once per frame
     void Update()
     {
         preparandoHUD();
@@ -156,21 +151,14 @@ public class GameController : MonoBehaviour
 
     void LateUpdate()
     {
-        //Mexendo camera
-
+        // A camera segue o jogador durante a exploracao.
         if (_player != null && faseAtual == estagiosFase.exploracao && _camera.isShakeMeteoro == false)
         {
             camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
         }
     }
 
-    IEnumerator fimJogo()
-    {
-        yield return new WaitForSeconds(5f);
-
-        SceneManager.LoadScene("FimDoJogo");
-    }
-
+    // Controla a troca entre exploracao e sobrevivencia.
     void ondasMeteorosAtivos()
     {
         if (ExisteMeteoroNaCena() == false)
@@ -209,6 +197,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Atualiza os textos da interface e a seta do meteoro final.
     void preparandoHUD()
     {
         recursosQtdText.text = ((int)recursosQtd).ToString();
@@ -223,6 +212,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Cria meteoros iniciais, posiciona o jogador e instancia o meteoro final.
     void instanciandoObjetos()
     {
         for (int i = 0; posicoesMeteoroInativo.Count <= limiteMaximoCena; i++)
@@ -247,15 +237,12 @@ public class GameController : MonoBehaviour
             Instantiate(meteoroInativoPrefab, posicoesMeteoroInativo[i], transform.localRotation);
         }
 
-        //Sorteando local de spawn do player
-
+        // Sorteia o local de spawn do player.
         Transform posicaoInicialPlayer = posicoesSpawnPlayer[Random.Range(0, posicoesSpawnPlayer.Length)];
 
         _player.transform.position = posicaoInicialPlayer.position;
 
         _camera.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, _camera.transform.position.z);
-
-        //Instanciando o meteoro final
 
         for (int i = 0; possiveisPosicoesMeteoroFinal.Count < limiteMaximoCena; i++)
         {
@@ -277,8 +264,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        //Quando a ultima posição foi criada, vamos randomizar a posição escolhida
-
+        // Escolhe uma posicao distante do jogador para o meteoro final.
         if (possiveisPosicoesMeteoroFinal.Count >= limiteMaximoCena)
         {
             int indiceEscolhido = Random.Range(0, possiveisPosicoesMeteoroFinal.Count);
@@ -307,6 +293,25 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private bool ExisteMeteoroNaCena()
+    {
+        return FindAnyObjectByType<MeteoroAtivo>() != null;
+    }
+
+    private GameObject ExisteMeteoroFinal(string tag)
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag(tag);
+
+        return obj;
+    }
+
+    IEnumerator fimJogo()
+    {
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene("FimDoJogo");
+    }
+
     IEnumerator delaySpawnMeteoros()
     {
         yield return new WaitForSeconds(Random.Range(tempDelayMeteoroSpawn[0], tempDelayMeteoroSpawn[1]));
@@ -331,17 +336,5 @@ public class GameController : MonoBehaviour
 
             StartCoroutine("spawnMeteoro");
         }
-    }
-
-    private bool ExisteMeteoroNaCena()
-    {
-        return FindAnyObjectByType<MeteoroAtivo>() != null;
-    }
-
-    private GameObject ExisteMeteoroFinal(string tag)
-    {
-        GameObject obj = GameObject.FindGameObjectWithTag(tag);
-
-        return obj;
     }
 }

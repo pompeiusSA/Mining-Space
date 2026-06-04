@@ -1,8 +1,9 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BgMov : MonoBehaviour
+public class Menus : MonoBehaviour
 {
+    // Referencias do material que sera movimentado.
     MeshRenderer meshrender;
 
     Material materialUsado;
@@ -21,7 +22,6 @@ public class BgMov : MonoBehaviour
         materialUsado = meshrender.material;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         valorInicial += incremento * Time.fixedDeltaTime;

@@ -4,8 +4,7 @@ public class Tiro : MonoBehaviour
 {
     void OnBecameInvisible()
     {
-        //De destruindo após sair da tela 
-
+        // Destroi o tiro quando ele sai da tela.
         Destroy(this.gameObject);
     }
 }

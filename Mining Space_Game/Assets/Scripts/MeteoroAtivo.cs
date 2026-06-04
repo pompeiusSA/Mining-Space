@@ -21,7 +21,7 @@ public class MeteoroAtivo : MonoBehaviour
 
         _jogador = FindAnyObjectByType(typeof(Jogador)) as Jogador;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         meteoroVel = Random.Range(100, 150);
@@ -34,15 +34,14 @@ public class MeteoroAtivo : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        rb.linearVelocity = transform.right * meteoroVel * Time.fixedDeltaTime;
-    }
-
-    // Update is called once per frame
     void Update()
     {
         ChecandoPlayerVivo();
+    }
+
+    void FixedUpdate()
+    {
+        rb.linearVelocity = transform.right * meteoroVel * Time.fixedDeltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D colidido)
@@ -86,6 +85,7 @@ public class MeteoroAtivo : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    // Atualiza o estado usado para evitar acessar o jogador destruido.
     bool ChecandoPlayerVivo()
     {
         if (_jogador != null)

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Dialogo : MonoBehaviour
 {
+    // Referencias e configuracoes do dialogo.
     public Text textoDialogo;
 
     [SerializeField] int index;
@@ -38,6 +39,7 @@ public class Dialogo : MonoBehaviour
         }
     }
 
+    // Prepara o dialogo para comecar pela primeira linha.
     void dialogoComeca()
     {
         index = 0;
@@ -45,6 +47,7 @@ public class Dialogo : MonoBehaviour
         StartCoroutine(dialogoDigitando());
     }
 
+    // Exibe a fala atual letra por letra.
     IEnumerator dialogoDigitando()
     {
         foreach (char item in linhas[index].ToCharArray())
@@ -55,6 +58,7 @@ public class Dialogo : MonoBehaviour
         }
     }
 
+    // Avanca a fala ou troca de cena ao final do dialogo.
     void proximaFala()
     {
         if (index < linhas.Length - 1)

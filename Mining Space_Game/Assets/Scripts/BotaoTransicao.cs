@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class BotaoTransicao : MonoBehaviour
 {
+    // Carrega a cena correspondente ao botao pressionado.
     public void saindoCena(int numeroCena)
     {
         switch (numeroCena)

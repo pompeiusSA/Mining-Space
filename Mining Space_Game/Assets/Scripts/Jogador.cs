@@ -8,10 +8,18 @@ using UnityEngine.UIElements;
 
 public class Jogador : MonoBehaviour
 {
+    // Referencias principais.
     GameController _gameController;
 
     Rigidbody2D rbPlayer;
 
+    Animator animatorPlayer;
+
+    AudioSource audioPlayer;
+
+    AudioClip clipeAudio;
+
+    // Movimento e estado do jogador.
     float velZ, velY;
 
     int velYInt;
@@ -22,47 +30,34 @@ public class Jogador : MonoBehaviour
 
     public bool isLaser;
 
-    Animator animatorPlayer;
-
     public bool isMorreu = false;
 
+    private bool isMorreuCutsceneAtivado = false;
+
+    // Pontos e limites usados durante o jogo.
     public Transform posAtirarPlayer;
 
     public Transform[] explosoesPos;
 
-    private bool isMorreuCutsceneAtivado = false;
-
     public Transform[] limitesMapa;
-
-    AudioSource audioPlayer;
-
-    AudioClip clipeAudio;
 
     void Awake()
     {
-        //Pegando o script do game controller
-
+        // Guarda as referencias usadas durante a partida.
         _gameController = FindAnyObjectByType(typeof(GameController)) as GameController;
-
-        //Pegando o Rigidbody2D do player
 
         rbPlayer = GetComponent<Rigidbody2D>();
 
-        //Pegando o animator do player
-
         animatorPlayer = GetComponent<Animator>();
-
-        //Pegando variavel de audio
 
         audioPlayer = GetComponent<AudioSource>();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         pegandoInput();
@@ -81,15 +76,13 @@ public class Jogador : MonoBehaviour
 
     void LateUpdate()
     {
-        //Ativando a animação conforme a condição do animator 
-
+        // Atualiza a animacao conforme o movimento vertical.
         animatorPlayer.SetInteger("velPlayer", velYInt);
     }
 
     private void pegandoInput()
     {
-        //Pegando o input
-
+        // Le os comandos de movimento do jogador.
         velZ = Input.GetAxis("Horizontal") * -1;
 
         velY = Input.GetAxis("Vertical");
@@ -108,15 +101,13 @@ public class Jogador : MonoBehaviour
 
     private void movimentacaoPlayer()
     {
-        //Fazendo o player rotacionar
-
+        // Rotaciona enquanto o jogador estiver vivo.
         if (isMorreu == false)
         {
             transform.Rotate(0, 0, velZ * _gameController.velPlayerRotacao * Time.fixedDeltaTime);
         }
 
-        //Player se movimentar
-
+        // Move a nave ou aplica freio gradual.
         if (isAndando && isMorreu == false)
         {
             rbPlayer.linearVelocity = transform.up * velY * _gameController.velPlayer;
@@ -130,13 +121,6 @@ public class Jogador : MonoBehaviour
 
             rbPlayer.linearVelocity = new Vector3(freioX, freioY, 0f);
         }
-    }
-
-    IEnumerator delayAtirar()
-    {
-        yield return new WaitForSeconds(_gameController.tempoDelayBala);
-
-        isAtirou = false;
     }
 
     private void atirando()
@@ -169,6 +153,7 @@ public class Jogador : MonoBehaviour
         }
     }
 
+    // Verifica se a nave deve entrar na sequencia de morte.
     public void playerMorte()
     {
         if (_gameController.energiaNaveAtual <= 0 || _gameController.vidaNave <= 0)
@@ -183,6 +168,35 @@ public class Jogador : MonoBehaviour
         }
     }
 
+    // Mantem o jogador dentro dos limites do mapa.
+    void limiteMapaPlayer()
+    {
+        if (transform.position.x >= limitesMapa[0].position.x)
+        {
+            transform.position = new Vector2(limitesMapa[0].position.x, transform.position.y);
+        }
+        else if (transform.position.x <= limitesMapa[1].position.x)
+        {
+            transform.position = new Vector2(limitesMapa[1].position.x, transform.position.y);
+        }
+        else if (transform.position.y <= limitesMapa[2].position.y)
+        {
+            transform.position = new Vector2(transform.position.x, limitesMapa[2].position.y);
+        }
+        else if (transform.position.y >= limitesMapa[3].position.y)
+        {
+            transform.position = new Vector2(transform.position.x, limitesMapa[3].position.y);
+        }
+    }
+
+    IEnumerator delayAtirar()
+    {
+        yield return new WaitForSeconds(_gameController.tempoDelayBala);
+
+        isAtirou = false;
+    }
+
+    // Executa as explosoes e troca para a cena de Game Over.
     IEnumerator playerMorrendoCutscene()
     {
         yield return new WaitForSeconds(0.5f);
@@ -216,25 +230,5 @@ public class Jogador : MonoBehaviour
         _gameController.materialCam.color = _gameController.corCamera;
 
         SceneManager.LoadScene("GameOver");
-    }
-
-    void limiteMapaPlayer()
-    {
-        if (transform.position.x >= limitesMapa[0].position.x)
-        {
-            transform.position = new Vector2(limitesMapa[0].position.x, transform.position.y);
-        }
-        else if (transform.position.x <= limitesMapa[1].position.x)
-        {
-            transform.position = new Vector2(limitesMapa[1].position.x, transform.position.y);
-        }
-        else if (transform.position.y <= limitesMapa[2].position.y)
-        {
-            transform.position = new Vector2(transform.position.x, limitesMapa[2].position.y);
-        }
-        else if (transform.position.y >= limitesMapa[3].position.y)
-        {
-            transform.position = new Vector2(transform.position.x, limitesMapa[3].position.y);
-        }
     }
 }

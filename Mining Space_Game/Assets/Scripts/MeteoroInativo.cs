@@ -25,7 +25,6 @@ public class MeteoroInativo : MonoBehaviour
         _laserScr = FindAnyObjectByType(typeof(LaserScr)) as LaserScr;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         meteoroVida = _gameController.vidaMeteoroMax;
@@ -59,7 +58,6 @@ public class MeteoroInativo : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_laserScr != null)
@@ -112,6 +110,7 @@ public class MeteoroInativo : MonoBehaviour
         }
     }
 
+    // Faz o meteoro tremer enquanto recebe dano do laser.
     IEnumerator shakeMeteoro()
     {
         Vector3 posicaoInicial = transform.position;

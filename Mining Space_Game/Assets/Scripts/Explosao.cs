@@ -4,6 +4,7 @@ using UnityEngine;
 public class Explosao : MonoBehaviour
 {
     SpriteRenderer sr;
+
     public Color corFinal;
 
     void Awake()
@@ -21,6 +22,7 @@ public class Explosao : MonoBehaviour
         StartCoroutine("delayDesparecimento");
     }
 
+    // Suaviza a cor da explosao ate a cor final.
     IEnumerator delayDesparecimento()
     {
         yield return new WaitForSeconds(0.25f);

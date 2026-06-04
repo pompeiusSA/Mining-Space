@@ -1,5 +1,5 @@
 using System.Collections;
-using UnityEditor.UIElements;
+//using UnityEditor.UIElements;
 using UnityEngine;
 
 public class LaserScr : MonoBehaviour
@@ -21,13 +21,6 @@ public class LaserScr : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector2 origem = transform.position;

@@ -5,15 +5,18 @@ using UnityEngine;
 public class CameraScr : MonoBehaviour
 {
     [SerializeField] float duracaoShake;
+
     public bool isShakeMeteoro;
+
     [SerializeField] AnimationCurve animCurveMeteoro;
+
     GameController _gameController;
 
     void Awake()
     {
         _gameController = FindAnyObjectByType(typeof(GameController)) as GameController;
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (isShakeMeteoro == true)
@@ -22,6 +25,7 @@ public class CameraScr : MonoBehaviour
         }
     }
 
+    // Aplica o tremor da camera e restaura a cor ao final.
     IEnumerator shake()
     {
         Vector3 posicaoInicial = transform.position;
