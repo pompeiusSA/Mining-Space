@@ -39,6 +39,8 @@ public class GameController : MonoBehaviour
 
     Jogador _player;
 
+    public Transform[] limitesCamPlayer;
+
     [Header("Gameplay configs")]
 
     public LayerMask layerMeteoro;
@@ -79,6 +81,7 @@ public class GameController : MonoBehaviour
 
     public GameObject particulasMeteoro;
     public GameObject particulasMeteoroInativo;
+    public GameObject particulasMeteoroFinal;
 
     [Header("Meteoro Inativo")]
 
@@ -121,6 +124,64 @@ public class GameController : MonoBehaviour
 
         energiaNaveAtual = recursosQtd / 2;
 
+        instanciandoObjetos();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        recursosQtdText.text = ((int)recursosQtd).ToString();
+
+        energiaNaveText.text = ((int)energiaNaveAtual + "%").ToString();
+
+        if (ExisteMeteoroNaCena() == false)
+        {
+            if (numMeteoroMax <= 0)
+            {
+                numMeteoroMax = Random.Range(10, 50);
+
+                faseAtual = estagiosFase.exploracao;
+                StartCoroutine("delaySpawnMeteoros");
+            }
+        }
+
+        if (faseAtual == estagiosFase.sobrevivencia)
+        {
+            if (_player.transform.position.x <= limitesCamPlayer[0].position.x)
+            {
+                _player.transform.position = new Vector2(limitesCamPlayer[0].position.x, _player.transform.position.y);
+            }
+            else if (_player.transform.position.x >= limitesCamPlayer[1].position.x)
+            {
+                _player.transform.position = new Vector2(limitesCamPlayer[1].position.x, _player.transform.position.y);
+            }
+            else if (_player.transform.position.y >= limitesCamPlayer[2].position.y)
+            {
+                _player.transform.position = new Vector2(_player.transform.position.x, limitesCamPlayer[2].position.y);
+            }
+            else if (_player.transform.position.y <= limitesCamPlayer[3].position.y)
+            {
+                _player.transform.position = new Vector2(_player.transform.position.x, limitesCamPlayer[3].position.y);
+            }
+        }
+        else
+        {
+
+        }
+    }
+
+    void LateUpdate()
+    {
+        //Mexendo camera
+
+        if (_player != null && faseAtual == estagiosFase.exploracao && _camera.isShakeMeteoro == false)
+        {
+            camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
+        }
+    }
+
+    void instanciandoObjetos()
+    {
         for (int i = 0; posicoesMeteoroInativo.Count <= limiteMaximoCena; i++)
         {
             bool isPode = false;
@@ -200,35 +261,6 @@ public class GameController : MonoBehaviour
                     isPode = true;
                 }
             }
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        recursosQtdText.text = ((int)recursosQtd).ToString();
-
-        energiaNaveText.text = ((int)energiaNaveAtual + "%").ToString();
-
-        if (ExisteMeteoroNaCena() == false)
-        {
-            if (numMeteoroMax <= 0)
-            {
-                numMeteoroMax = Random.Range(10, 50);
-
-                faseAtual = estagiosFase.exploracao;
-                StartCoroutine("delaySpawnMeteoros");
-            }
-        }
-    }
-
-    void LateUpdate()
-    {
-        //Mexendo camera
-
-        if (_player != null && faseAtual == estagiosFase.exploracao && _camera.isShakeMeteoro == false)
-        {
-            camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
         }
     }
 

@@ -29,19 +29,32 @@ public class MeteoroInativo : MonoBehaviour
     {
         meteoroVida = _gameController.vidaMeteoroMax;
 
-        qualidadeMeteoro = Random.Range(0, 100);
+        switch (this.gameObject.tag)
+        {
+            case "Untagged":
 
-        if (qualidadeMeteoro >= 85)
-        {
-            recursosColhidos = 1;
-        }
-        else if (qualidadeMeteoro >= 35)
-        {
-            recursosColhidos = 0.1f;
-        }
-        else
-        {
-            recursosColhidos = 0.5f;
+                qualidadeMeteoro = Random.Range(0, 100);
+
+                if (qualidadeMeteoro >= 85)
+                {
+                    recursosColhidos = 1;
+                }
+                else if (qualidadeMeteoro >= 35)
+                {
+                    recursosColhidos = 0.1f;
+                }
+                else
+                {
+                    recursosColhidos = 0.5f;
+                }
+
+                break;
+
+            case "meteoroFinal":
+
+                recursosColhidos = 20;
+
+                break;
         }
     }
 
@@ -50,21 +63,49 @@ public class MeteoroInativo : MonoBehaviour
     {
         if (_laserScr != null)
         {
-            if (_laserScr.GetComponent<SpriteRenderer>().enabled == true)
+            switch (this.gameObject.tag)
             {
-                if (isShakeMeteoro == true)
-                {
-                    isShakeMeteoro = false;
-                    StartCoroutine(shakeMeteoro());
-                }
+                case "Untagged":
 
-                if (meteoroVida <= 0)
-                {
-                    Destroy(this.gameObject);
+                    if (_laserScr.GetComponent<SpriteRenderer>().enabled == true)
+                    {
+                        if (isShakeMeteoro == true)
+                        {
+                            isShakeMeteoro = false;
+                            StartCoroutine(shakeMeteoro());
+                        }
 
-                    Instantiate(_gameController.particulasMeteoroInativo, transform.position, transform.localRotation);
-                }
+                        if (meteoroVida <= 0)
+                        {
+                            Destroy(this.gameObject);
+
+                            Instantiate(_gameController.particulasMeteoroInativo, transform.position, transform.localRotation);
+                        }
+                    }
+
+                    break;
+
+                case "meteoroFinal":
+
+                    if (_laserScr.GetComponent<SpriteRenderer>().enabled == true)
+                    {
+                        if (isShakeMeteoro == true)
+                        {
+                            isShakeMeteoro = false;
+                            StartCoroutine(shakeMeteoro());
+                        }
+
+                        if (meteoroVida <= 0)
+                        {
+                            Destroy(this.gameObject);
+
+                            Instantiate(_gameController.particulasMeteoroFinal, transform.position, transform.localRotation);
+                        }
+                    }
+
+                    break;
             }
+
         }
     }
 
