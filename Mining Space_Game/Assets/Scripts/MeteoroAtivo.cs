@@ -59,17 +59,23 @@ public class MeteoroAtivo : MonoBehaviour
                     break;
 
                 case "Player":
-                    _gameController.vidaNave -= 10;
+                    if (colidido.GetComponent<SpriteRenderer>().enabled == true)
+                    {
+                        colidido.GetComponent<AudioSource>().PlayOneShot(_gameController.sonsJogo[0]);
 
-                    _gameController.isDano = true;
+                        _gameController.vidaNave -= 10;
 
-                    _gameController._camera.isShakeMeteoro = true;
+                        _gameController.isDano = true;
 
-                    Instantiate(_gameController.explosaoPrefab, transform.position, transform.localRotation);
+                        _gameController._camera.isShakeMeteoro = true;
 
-                    _gameController._camera.isShakeMeteoro = true;
+                        Instantiate(_gameController.explosaoPrefab, transform.position, transform.localRotation);
 
-                    Destroy(this.gameObject);
+                        _gameController._camera.isShakeMeteoro = true;
+
+                        Destroy(this.gameObject);
+                    }
+
                     break;
             }
         }

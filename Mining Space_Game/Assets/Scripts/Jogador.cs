@@ -1,7 +1,9 @@
 using System.Collections;
+using GLTFast.Schema;
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Jogador : MonoBehaviour
@@ -32,6 +34,10 @@ public class Jogador : MonoBehaviour
 
     public Transform[] limitesMapa;
 
+    AudioSource audioPlayer;
+
+    AudioClip clipeAudio;
+
     void Awake()
     {
         //Pegando o script do game controller
@@ -45,6 +51,10 @@ public class Jogador : MonoBehaviour
         //Pegando o animator do player
 
         animatorPlayer = GetComponent<Animator>();
+
+        //Pegando variavel de audio
+
+        audioPlayer = GetComponent<AudioSource>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -140,6 +150,10 @@ public class Jogador : MonoBehaviour
 
             _gameController.energiaNaveAtual -= _gameController.energiaGasta[1];
 
+            clipeAudio = _gameController.sonsJogo[2];
+
+            audioPlayer.PlayOneShot(clipeAudio);
+
             StartCoroutine("delayAtirar");
         }
 
@@ -171,6 +185,8 @@ public class Jogador : MonoBehaviour
 
     IEnumerator playerMorrendoCutscene()
     {
+        clipeAudio = _gameController.sonsJogo[1];
+
         yield return new WaitForSeconds(0.5f);
 
         Instantiate(_gameController.explosaoPrefab, explosoesPos[0].transform.position, transform.localRotation);
@@ -189,8 +205,8 @@ public class Jogador : MonoBehaviour
 
         Instantiate(_gameController.explosaoPrefab, explosoesPos[1].transform.position, transform.localRotation);
         Instantiate(_gameController.explosaoPrefab, explosoesPos[0].transform.position, transform.localRotation);
-
         Instantiate(_gameController.explosaoPrefab, explosoesPos[2].transform.position, transform.localRotation);
+
         this.GetComponent<SpriteRenderer>().enabled = false;
 
         Instantiate(_gameController.explosaoPrefab, transform.position, transform.localRotation);
@@ -198,6 +214,10 @@ public class Jogador : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         Destroy(this.gameObject);
+
+        _gameController.materialCam.color = _gameController.corCamera;
+
+        SceneManager.LoadScene("GameOver");
     }
 
     void limiteMapaPlayer()

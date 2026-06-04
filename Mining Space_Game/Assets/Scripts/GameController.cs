@@ -55,6 +55,8 @@ public class GameController : MonoBehaviour
 
     public float[] tempDelayMeteoroSpawn;
 
+    public AudioClip[] sonsJogo;
+
     public Camera camera;
 
     public Transform[] posicoesSpawnPlayer;
@@ -82,6 +84,8 @@ public class GameController : MonoBehaviour
     public GameObject particulasMeteoro;
     public GameObject particulasMeteoroInativo;
     public GameObject particulasMeteoroFinal;
+
+    public GameObject setaMeteoroFinal;
 
     [Header("Meteoro Inativo")]
 
@@ -124,16 +128,35 @@ public class GameController : MonoBehaviour
 
         energiaNaveAtual = recursosQtd / 2;
 
+        QualitySettings.vSyncCount = 1;
+
+        Application.targetFrameRate = 60;
+
+        materialCam.color = corCamera;
+
         instanciandoObjetos();
     }
 
     // Update is called once per frame
     void Update()
     {
-        recursosQtdText.text = ((int)recursosQtd).ToString();
+        preparandoHUD();
 
-        energiaNaveText.text = ((int)energiaNaveAtual + "%").ToString();
+        ondasMeteorosAtivos();
+    }
 
+    void LateUpdate()
+    {
+        //Mexendo camera
+
+        if (_player != null && faseAtual == estagiosFase.exploracao && _camera.isShakeMeteoro == false)
+        {
+            camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
+        }
+    }
+
+    void ondasMeteorosAtivos()
+    {
         if (ExisteMeteoroNaCena() == false)
         {
             if (numMeteoroMax <= 0)
@@ -170,13 +193,17 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void preparandoHUD()
     {
-        //Mexendo camera
+        recursosQtdText.text = ((int)recursosQtd).ToString();
 
-        if (_player != null && faseAtual == estagiosFase.exploracao && _camera.isShakeMeteoro == false)
+        energiaNaveText.text = ((int)energiaNaveAtual + "%").ToString();
+
+        if (ExisteMeteoroFinal("meteoroFinal") != null)
         {
-            camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
+            setaMeteoroFinal.transform.right = ExisteMeteoroFinal("meteoroFinal").transform.position - setaMeteoroFinal.transform.position;
+
+            setaMeteoroFinal.GetComponent<Rigidbody2D>().linearVelocity = setaMeteoroFinal.transform.right * 0;
         }
     }
 
@@ -293,5 +320,12 @@ public class GameController : MonoBehaviour
     private bool ExisteMeteoroNaCena()
     {
         return FindAnyObjectByType<MeteoroAtivo>() != null;
+    }
+
+    private GameObject ExisteMeteoroFinal(string tag)
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag(tag);
+
+        return obj;
     }
 }

@@ -10,6 +10,8 @@ public class LaserScr : MonoBehaviour
 
     private SpriteRenderer sr;
 
+    public bool isLaser = false;
+
     void Awake()
     {
         _jogador = FindAnyObjectByType(typeof(Jogador)) as Jogador;

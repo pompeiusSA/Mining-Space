@@ -42,7 +42,7 @@ public class CameraScr : MonoBehaviour
 
         transform.position = posicaoInicial;
 
-        _gameController.materialCam.color = Color.Lerp(_gameController.materialCam.color, _gameController.corCamera, 0.4f);
+        _gameController.materialCam.color = _gameController.corCamera;
 
         isShakeMeteoro = false;
 
