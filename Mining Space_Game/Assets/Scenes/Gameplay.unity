@@ -1022,6 +1022,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   isDano: 0
   faseAtual: 0
+  meteoroFinal: {fileID: 7810528905888599647, guid: c1797ae5f38bfe2418ef30bc391d56dc, type: 3}
   recursosQtdText: {fileID: 1664968294}
   energiaNaveText: {fileID: 1797684122}
   materialCam: {fileID: 2100000, guid: 66993c3718d4074489637e5b8692c24d, type: 2}
@@ -1035,6 +1036,7 @@ MonoBehaviour:
   meteoroInativoPrefab: {fileID: 510949573149388184, guid: 0cb3538f10f010146b2a75316cfabe3f, type: 3}
   limiteMaximoCena: 300
   posicoesMeteoroInativo: []
+  possiveisPosicoesMeteoroFinal: []
   limiteAtualMeteorosInativos: 0
   posicoesSpawn:
   - {fileID: 333171363}
