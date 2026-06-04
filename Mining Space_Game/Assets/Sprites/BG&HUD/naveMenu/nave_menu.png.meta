@@ -1,0 +1,1690 @@
+fileFormatVersion: 2
+guid: 6d740862360160a4aa58b8e1be3c7b3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4398045725918621407
+    second: nave_menu_0
+  - first:
+      213: 58726248047141369
+    second: nave_menu_1
+  - first:
+      213: -5477436570988245852
+    second: nave_menu_2
+  - first:
+      213: 2402619164151127729
+    second: nave_menu_3
+  - first:
+      213: 1864210077880700161
+    second: nave_menu_4
+  - first:
+      213: 433009328854721432
+    second: nave_menu_5
+  - first:
+      213: 6223196675739528204
+    second: nave_menu_6
+  - first:
+      213: 8492650078093544624
+    second: nave_menu_7
+  - first:
+      213: -3750799744538860718
+    second: nave_menu_8
+  - first:
+      213: -2443553335565164500
+    second: nave_menu_9
+  - first:
+      213: 4552815751077907949
+    second: nave_menu_10
+  - first:
+      213: -9200055443322531799
+    second: nave_menu_11
+  - first:
+      213: -8099192849621731186
+    second: nave_menu_12
+  - first:
+      213: -4144077584223204408
+    second: nave_menu_13
+  - first:
+      213: -2300104760499040349
+    second: nave_menu_14
+  - first:
+      213: 831201321317025348
+    second: nave_menu_15
+  - first:
+      213: 9111882908147271636
+    second: nave_menu_16
+  - first:
+      213: 4257639352016781346
+    second: nave_menu_17
+  - first:
+      213: -7813928155699630342
+    second: nave_menu_18
+  - first:
+      213: 6705143190844724264
+    second: nave_menu_19
+  - first:
+      213: -1944499943776687759
+    second: nave_menu_20
+  - first:
+      213: -7628496861859689053
+    second: nave_menu_21
+  - first:
+      213: 1161097535777179604
+    second: nave_menu_22
+  - first:
+      213: 2764541961954577246
+    second: nave_menu_23
+  - first:
+      213: -8741460912393090716
+    second: nave_menu_24
+  - first:
+      213: 7010961296358504858
+    second: nave_menu_25
+  - first:
+      213: -7045411966062374574
+    second: nave_menu_26
+  - first:
+      213: -4156740162335501900
+    second: nave_menu_27
+  - first:
+      213: 8949930659429798921
+    second: nave_menu_28
+  - first:
+      213: -9049131776312426687
+    second: nave_menu_29
+  - first:
+      213: 9122800730116507392
+    second: nave_menu_30
+  - first:
+      213: -5948002312237435349
+    second: nave_menu_31
+  - first:
+      213: -4678208315602374153
+    second: nave_menu_32
+  - first:
+      213: 4739097544177184097
+    second: nave_menu_33
+  - first:
+      213: 4389380427138179940
+    second: nave_menu_34
+  - first:
+      213: 2067328055392610006
+    second: nave_menu_35
+  - first:
+      213: 4404837192013342158
+    second: nave_menu_36
+  - first:
+      213: 5697348099953984664
+    second: nave_menu_37
+  - first:
+      213: -6236560041000281564
+    second: nave_menu_38
+  - first:
+      213: 6004345702518181996
+    second: nave_menu_39
+  - first:
+      213: -7287094810608156298
+    second: nave_menu_40
+  - first:
+      213: -6824122373308379073
+    second: nave_menu_41
+  - first:
+      213: 3741501503388167003
+    second: nave_menu_42
+  - first:
+      213: 5517640718617771375
+    second: nave_menu_43
+  - first:
+      213: 8846313466465854425
+    second: nave_menu_44
+  - first:
+      213: -1299091461162721564
+    second: nave_menu_45
+  - first:
+      213: -1040398818229398691
+    second: nave_menu_46
+  - first:
+      213: -8068972155940838920
+    second: nave_menu_47
+  - first:
+      213: -2642065743085068460
+    second: nave_menu_48
+  - first:
+      213: 2565938216481355473
+    second: nave_menu_49
+  - first:
+      213: -7437876003050726698
+    second: nave_menu_50
+  - first:
+      213: -8379222627758229584
+    second: nave_menu_51
+  - first:
+      213: 1519681045040857313
+    second: nave_menu_52
+  - first:
+      213: 226387804452936115
+    second: nave_menu_53
+  - first:
+      213: 5909884530189636326
+    second: nave_menu_54
+  - first:
+      213: -6817024766090864720
+    second: nave_menu_55
+  - first:
+      213: -8040641743736808086
+    second: nave_menu_56
+  - first:
+      213: 8306079429870263781
+    second: nave_menu_57
+  - first:
+      213: 5267523609612492964
+    second: nave_menu_58
+  - first:
+      213: -1328015646467044283
+    second: nave_menu_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nave_menu_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1857
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12112b0d6b007f2c0800000000000000
+      internalID: -4398045725918621407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_1
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1857
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f167d12633a0d000800000000000000
+      internalID: 58726248047141369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_2
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1857
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac038a957c3cf3b0800000000000000
+      internalID: -5477436570988245852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_3
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1857
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be16c17661d75120800000000000000
+      internalID: 2402619164151127729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_4
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1857
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d48c650310fd910800000000000000
+      internalID: 1864210077880700161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_5
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1857
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893e0deb0bb520600800000000000000
+      internalID: 433009328854721432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_6
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 1857
+        width: 177
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ca8d8976c3d5650800000000000000
+      internalID: 6223196675739528204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_7
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1857
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc85720044fbd570800000000000000
+      internalID: 8492650078093544624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253a223418b72fbc0800000000000000
+      internalID: -3750799744538860718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_9
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20eae31031c61ed0800000000000000
+      internalID: -2443553335565164500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_10
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded4dc2cdc9de2f30800000000000000
+      internalID: 4552815751077907949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_11
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9209cda7156d25080800000000000000
+      internalID: -9200055443322531799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_12
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88b9eeb303e99f80800000000000000
+      internalID: -8099192849621731186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_13
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb87b6b4674d76c0800000000000000
+      internalID: -4144077584223204408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_14
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af054428e26410e0800000000000000
+      internalID: -2300104760499040349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_15
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1601
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446cfe5a235098b00800000000000000
+      internalID: 831201321317025348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1345
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d742176a39e37e70800000000000000
+      internalID: 9111882908147271636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_17
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1345
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2204fa6ce6c261b30800000000000000
+      internalID: 4257639352016781346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_18
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1345
+        width: 176
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afea91b0eb95f8390800000000000000
+      internalID: -7813928155699630342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_19
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1345
+        width: 176
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824dd6ae4347d0d50800000000000000
+      internalID: 6705143190844724264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_20
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1345
+        width: 176
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1796c618a9fb305e0800000000000000
+      internalID: -1944499943776687759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_21
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 1345
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3adcbaa8582222690800000000000000
+      internalID: -7628496861859689053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_22
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1345
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d784999e0c0d1010800000000000000
+      internalID: 1161097535777179604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_23
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 1345
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5bc6f86440ad5620800000000000000
+      internalID: 2764541961954577246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_24
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46909da4d9710b680800000000000000
+      internalID: -8741460912393090716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_25
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99f5734720fb4160800000000000000
+      internalID: 7010961296358504858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_26
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251d092252ba93e90800000000000000
+      internalID: -7045411966062374574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_27
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1946088da4056c0800000000000000
+      internalID: -4156740162335501900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_28
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904d0b7148a843c70800000000000000
+      internalID: 8949930659429798921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_29
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14fb23308960b6280800000000000000
+      internalID: -9049131776312426687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_30
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007c44bede2ba9e70800000000000000
+      internalID: 9122800730116507392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_31
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 1089
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26b2ef2963747da0800000000000000
+      internalID: -5948002312237435349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_32
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 833
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1fd3bb25aa31fb0800000000000000
+      internalID: -4678208315602374153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_33
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 833
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d6b9c8b18a4c140800000000000000
+      internalID: 4739097544177184097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_34
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 833
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463af971e363aec30800000000000000
+      internalID: 4389380427138179940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_35
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 833
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d620e7c9ef90bc10800000000000000
+      internalID: 2067328055392610006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_36
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 833
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5626b9610212d30800000000000000
+      internalID: 4404837192013342158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_37
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 833
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894018b39eb011f40800000000000000
+      internalID: 5697348099953984664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_38
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 833
+        width: 175
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a58c77fa94379a0800000000000000
+      internalID: -6236560041000281564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_39
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 833
+        width: 176
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c605d33aa98b35350800000000000000
+      internalID: 6004345702518181996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_40
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 577
+        width: 176
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671cb11e0e90fda90800000000000000
+      internalID: -7287094810608156298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_41
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 577
+        width: 176
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3098237bd8db41a0800000000000000
+      internalID: -6824122373308379073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_42
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 577
+        width: 176
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5baa044bcb7ce330800000000000000
+      internalID: 3741501503388167003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_43
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 577
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d7177fff8929c40800000000000000
+      internalID: 5517640718617771375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_44
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 577
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3a37c5a3b64ca70800000000000000
+      internalID: 8846313466465854425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_45
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 577
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee17aee233b8fde0800000000000000
+      internalID: -1299091461162721564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_46
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 577
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5353be79c2cf81f0800000000000000
+      internalID: -1040398818229398691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_47
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 577
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1e0ae4390450090800000000000000
+      internalID: -8068972155940838920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_48
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 321
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f9f26743f755bd0800000000000000
+      internalID: -2642065743085068460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_49
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 321
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d678f4863b0c9320800000000000000
+      internalID: 2565938216481355473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_50
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 321
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da52cace2b57c890800000000000000
+      internalID: -7437876003050726698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_51
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 321
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b73e824a6507bb80800000000000000
+      internalID: -8379222627758229584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_52
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 321
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e00e8ddbddf61510800000000000000
+      internalID: 1519681045040857313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_53
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 321
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9d5e9328a442300800000000000000
+      internalID: 226387804452936115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_54
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 321
+        width: 177
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e297851ba0240250800000000000000
+      internalID: 5909884530189636326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_55
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 321
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b71d18e7101561a0800000000000000
+      internalID: -6817024766090864720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_56
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 65
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6dd36a6fe6e96090800000000000000
+      internalID: -8040641743736808086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_57
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 65
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed9895eb3f154370800000000000000
+      internalID: 8306079429870263781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_58
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 65
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0afec70d00a1940800000000000000
+      internalID: 5267523609612492964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave_menu_59
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 65
+        width: 176
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ccb204ec0f19de0800000000000000
+      internalID: -1328015646467044283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nave_menu_0: -4398045725918621407
+      nave_menu_1: 58726248047141369
+      nave_menu_10: 4552815751077907949
+      nave_menu_11: -9200055443322531799
+      nave_menu_12: -8099192849621731186
+      nave_menu_13: -4144077584223204408
+      nave_menu_14: -2300104760499040349
+      nave_menu_15: 831201321317025348
+      nave_menu_16: 9111882908147271636
+      nave_menu_17: 4257639352016781346
+      nave_menu_18: -7813928155699630342
+      nave_menu_19: 6705143190844724264
+      nave_menu_2: -5477436570988245852
+      nave_menu_20: -1944499943776687759
+      nave_menu_21: -7628496861859689053
+      nave_menu_22: 1161097535777179604
+      nave_menu_23: 2764541961954577246
+      nave_menu_24: -8741460912393090716
+      nave_menu_25: 7010961296358504858
+      nave_menu_26: -7045411966062374574
+      nave_menu_27: -4156740162335501900
+      nave_menu_28: 8949930659429798921
+      nave_menu_29: -9049131776312426687
+      nave_menu_3: 2402619164151127729
+      nave_menu_30: 9122800730116507392
+      nave_menu_31: -5948002312237435349
+      nave_menu_32: -4678208315602374153
+      nave_menu_33: 4739097544177184097
+      nave_menu_34: 4389380427138179940
+      nave_menu_35: 2067328055392610006
+      nave_menu_36: 4404837192013342158
+      nave_menu_37: 5697348099953984664
+      nave_menu_38: -6236560041000281564
+      nave_menu_39: 6004345702518181996
+      nave_menu_4: 1864210077880700161
+      nave_menu_40: -7287094810608156298
+      nave_menu_41: -6824122373308379073
+      nave_menu_42: 3741501503388167003
+      nave_menu_43: 5517640718617771375
+      nave_menu_44: 8846313466465854425
+      nave_menu_45: -1299091461162721564
+      nave_menu_46: -1040398818229398691
+      nave_menu_47: -8068972155940838920
+      nave_menu_48: -2642065743085068460
+      nave_menu_49: 2565938216481355473
+      nave_menu_5: 433009328854721432
+      nave_menu_50: -7437876003050726698
+      nave_menu_51: -8379222627758229584
+      nave_menu_52: 1519681045040857313
+      nave_menu_53: 226387804452936115
+      nave_menu_54: 5909884530189636326
+      nave_menu_55: -6817024766090864720
+      nave_menu_56: -8040641743736808086
+      nave_menu_57: 8306079429870263781
+      nave_menu_58: 5267523609612492964
+      nave_menu_59: -1328015646467044283
+      nave_menu_6: 6223196675739528204
+      nave_menu_7: 8492650078093544624
+      nave_menu_8: -3750799744538860718
+      nave_menu_9: -2443553335565164500
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
