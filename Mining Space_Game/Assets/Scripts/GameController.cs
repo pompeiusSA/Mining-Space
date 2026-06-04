@@ -63,6 +63,8 @@ public class GameController : MonoBehaviour
 
     public estagiosFase faseAtual;
 
+    public GameObject meteoroFinal;
+
     [Header("UI")]
 
     public Text recursosQtdText;
@@ -92,6 +94,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] List<Vector2> posicoesMeteoroInativo = new List<Vector2>();
 
+    [SerializeField] List<Vector2> possiveisPosicoesMeteoroFinal = new List<Vector2>();
+
     [SerializeField] int limiteAtualMeteorosInativos = 0;
 
     [Header("Meteoro Ativo")]
@@ -106,26 +110,16 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        energiaNaveAtual = recursosQtd / 2;
-
         _player = FindAnyObjectByType(typeof(Jogador)) as Jogador;
 
         _camera = FindAnyObjectByType(typeof(CameraScr)) as CameraScr;
-
-        //Sorteando local de spawn do player
-
-        Transform posicaoInicialPlayer = posicoesSpawnPlayer[Random.Range(0, posicoesSpawnPlayer.Length)];
-
-        _player.transform.position = posicaoInicialPlayer.position;
-
-        _camera.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, _camera.transform.position.z);
-
-        //while(posicaoFimJogo.position == _player.transform.position || )
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         faseAtual = estagiosFase.exploracao;
+
+        energiaNaveAtual = recursosQtd / 2;
 
         for (int i = 0; posicoesMeteoroInativo.Count <= limiteMaximoCena; i++)
         {
@@ -147,6 +141,65 @@ public class GameController : MonoBehaviour
             }
 
             Instantiate(meteoroInativoPrefab, posicoesMeteoroInativo[i], transform.localRotation);
+        }
+
+        //Sorteando local de spawn do player
+
+        Transform posicaoInicialPlayer = posicoesSpawnPlayer[Random.Range(0, posicoesSpawnPlayer.Length)];
+
+        _player.transform.position = posicaoInicialPlayer.position;
+
+        _camera.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, _camera.transform.position.z);
+
+        //Instanciando o meteoro final
+
+        for (int i = 0; possiveisPosicoesMeteoroFinal.Count < limiteMaximoCena; i++)
+        {
+            bool isPode = false;
+
+            while (isPode == false)
+            {
+                Vector2 posNova = new Vector2(Random.Range(-360, 390), Random.Range(-190, 250));
+
+                if (posicoesMeteoroInativo.Contains(posNova))
+                {
+                    posNova = new Vector2(Random.Range(-360, 390), Random.Range(-190, 250));
+                }
+                else
+                {
+                    possiveisPosicoesMeteoroFinal.Add(posNova);
+                    isPode = true;
+                }
+            }
+        }
+
+        //Quando a ultima posição foi criada, vamos randomizar a posição escolhida
+
+        if (possiveisPosicoesMeteoroFinal.Count >= limiteMaximoCena)
+        {
+            int indiceEscolhido = Random.Range(0, possiveisPosicoesMeteoroFinal.Count);
+
+            Vector2 posEscolhida = possiveisPosicoesMeteoroFinal[indiceEscolhido];
+
+            float distPlayer = Vector2.Distance(_player.transform.position, posEscolhida);
+
+            bool isPode = false;
+
+            while (isPode == false)
+            {
+                if (distPlayer < 400)
+                {
+                    indiceEscolhido = Random.Range(0, possiveisPosicoesMeteoroFinal.Count);
+                    posEscolhida = possiveisPosicoesMeteoroFinal[indiceEscolhido];
+                    distPlayer = Vector2.Distance(_player.transform.position, posEscolhida);
+                }
+                else
+                {
+                    Instantiate(meteoroFinal, posEscolhida, transform.localRotation);
+
+                    isPode = true;
+                }
+            }
         }
     }
 
