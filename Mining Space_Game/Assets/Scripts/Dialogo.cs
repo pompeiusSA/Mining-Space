@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,13 +15,16 @@ public class Dialogo : MonoBehaviour
     public float velTexto;
 
     [Header("Cena após o diálogo")]
-    public string nomeCena;
+
+    [SerializeField] string cenaAtual;
 
     void Start()
     {
         textoDialogo.text = string.Empty;
 
-        dialogoComeca();
+        StartCoroutine("dialogoComeca");
+
+        cenaAtual = SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -61,7 +65,20 @@ public class Dialogo : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(nomeCena);
+            switch (cenaAtual)
+            {
+                case "EntreFases":
+
+                    SceneManager.LoadScene("Gameplay");
+
+                    break;
+
+                case "FimDoJogo":
+
+                    SceneManager.LoadScene("Menu");
+
+                    break;
+            }
         }
     }
 }

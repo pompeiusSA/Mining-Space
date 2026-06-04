@@ -185,8 +185,6 @@ public class Jogador : MonoBehaviour
 
     IEnumerator playerMorrendoCutscene()
     {
-        clipeAudio = _gameController.sonsJogo[1];
-
         yield return new WaitForSeconds(0.5f);
 
         Instantiate(_gameController.explosaoPrefab, explosoesPos[0].transform.position, transform.localRotation);

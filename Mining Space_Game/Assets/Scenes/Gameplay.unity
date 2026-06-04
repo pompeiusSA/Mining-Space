@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8248c69faaf8e48be9a68f1797358e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
-  velPlayer: 2
+  velPlayer: 5
   velPlayerRotacao: 100
   delayRePlayer: 0.05
   balaPrefabs: {fileID: 5030492809638099495, guid: 363f08ce6a7c60b43a3a97cfbd46369f, type: 3}
@@ -1149,8 +1149,8 @@ MonoBehaviour:
   tempoDelayBala: 0.5
   energiaNaveAtual: 0
   energiaGasta:
-  - 0.1
   - 2
+  - 0.5
   vidaNave: 30
   limitesCamPlayer:
   - {fileID: 1973975352}
@@ -1167,13 +1167,14 @@ MonoBehaviour:
   - 0.5
   - 2
   tempDelayMeteoroSpawn:
+  - 10
   - 30
-  - 60
   sonsJogo:
   - {fileID: 8300000, guid: dac1c7396e3ac26499cb3d18467ee180, type: 3}
   - {fileID: 8300000, guid: 5d5b362a9406d594fb840862b7266752, type: 3}
   - {fileID: 8300000, guid: 645e3adde4c242b45a053b506e81154b, type: 3}
   camera: {fileID: 519420031}
+  isFim: 0
   posicoesSpawnPlayer:
   - {fileID: 520808991}
   - {fileID: 631953440}

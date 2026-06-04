@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MeteoroInativo : MonoBehaviour
 {
@@ -98,6 +99,8 @@ public class MeteoroInativo : MonoBehaviour
                         if (meteoroVida <= 0)
                         {
                             Destroy(this.gameObject);
+
+                            _gameController.isFim = true;
 
                             Instantiate(_gameController.particulasMeteoroFinal, transform.position, transform.localRotation);
                         }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using GLTFast.Schema;
 using JetBrains.Annotations;
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum estagiosFase
@@ -57,7 +59,9 @@ public class GameController : MonoBehaviour
 
     public AudioClip[] sonsJogo;
 
-    public Camera camera;
+    public UnityEngine.Camera camera;
+
+    public bool isFim = false;
 
     public Transform[] posicoesSpawnPlayer;
 
@@ -75,7 +79,7 @@ public class GameController : MonoBehaviour
 
     public Text energiaNaveText;
 
-    public Material materialCam;
+    public UnityEngine.Material materialCam;
 
     public Color corDanoCamera;
 
@@ -143,6 +147,11 @@ public class GameController : MonoBehaviour
         preparandoHUD();
 
         ondasMeteorosAtivos();
+
+        if (isFim == true)
+        {
+            StartCoroutine("fimJogo");
+        }
     }
 
     void LateUpdate()
@@ -153,6 +162,13 @@ public class GameController : MonoBehaviour
         {
             camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, camera.transform.position.z), 0.4f);
         }
+    }
+
+    IEnumerator fimJogo()
+    {
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene("FimDoJogo");
     }
 
     void ondasMeteorosAtivos()

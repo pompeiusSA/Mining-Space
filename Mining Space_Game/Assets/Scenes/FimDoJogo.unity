@@ -119,97 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &340364420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 340364421}
-  - component: {fileID: 340364424}
-  - component: {fileID: 340364423}
-  - component: {fileID: 340364422}
-  m_Layer: 5
-  m_Name: iconeControler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &340364421
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340364420}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4054, y: 5.2881217, z: 2.4054}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1696028098}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: 1534}
-  m_SizeDelta: {x: 1124, y: 503}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &340364422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340364420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0, g: 0.26651955, b: 1, a: 0.5}
-  m_EffectDistance: {x: 10, y: -10}
-  m_UseGraphicAlpha: 1
---- !u!114 &340364423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340364420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6117647}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f2bb8ef28923504b8a04fdd2e8ee1c7, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &340364424
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340364420}
-  m_CullTransparentMesh: 1
 --- !u!1 &472931611
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,17 +304,23 @@ MonoBehaviour:
   textoDialogo: {fileID: 1557935272}
   index: 0
   linhas:
-  - "Voc\xEA est\xE1 quase pronto para terminar seu expediente."
-  - "Por\xE9m, foi comunicado que voc\xEA teria que coletar mais um meteoro."
-  - "Esse meteoro n\xE3o \xE9 comum, \xE9 revestido de ouro, extremamente rico em
-    minerais e recursos."
-  - "Colete ele para que possa encerrar seu servi\xE7o por hoje."
-  - "Tome cuidado, voc\xEA deu azar que justo hoje est\xE1 ocorrendo ondas de meteoros
-    ativos!"
-  - Destrua-os com os projeteis da sua nave!
-  - "E se for necess\xE1rio, caso a anergia da sua nave esteja acabando, colete minerais
-    dos meteoros verdes com seu laser!"
-  - Boa sorte!
+  - "Parab\xE9ns, voc\xEA conseguiu coletar o \"meteoro de ouro\"!"
+  - "Hoje, antes de voc\xEA ter come\xE7ado essa \xFAltima miss\xE3o, voc\xEA s\xF3
+    tinha coletado 400 minerais..."
+  - "N\xE3o que seja pouco, \xE9 um n\xFAmero bom, por\xE9m ao ser visto pelo radar
+    que tinha um meteoro \"especial\" desse tipo na regi\xE3o, n\xE3o poderiamos
+    ignorar!"
+  - "Por conta da sua coragem, ao chegar na Terra, ser\xE1 parabenizado pela empresa
+    e colegas..."
+  - "Al\xE9m claro de uma remunera\xE7\xE3o extra pelo seu grande ato!"
+  - "Por sua causa, poderemos exportar mais recursos esse m\xEAs..."
+  - "Assim, mantendo a empresa no positivo, e principalmente...ajudar com mais efic\xE1cia
+    na reconstru\xE7\xE3o de nosso querido planeta."
+  - "Infelizmente nosso planeta n\xE3o consegue produzir tantos recursos como antigamente..."
+  - "Maldito seja os acontecimentos desse s\xE9culo, maldita seja a ganancia humana!"
+  - "Enfim, n\xE3o desanime amigo! Juntos, iremos fazer essa empresa continuar de
+    p\xE9, e principalmente...NA CONTRU\xC7\xC3O DE UM PLANETA MELHOR! "
+  - Te esperamos anciosos, Pedro!
   velTexto: 0.05
   cenaAtual: 
 --- !u!82 &861527606
@@ -793,7 +708,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1557935271}
-  - {fileID: 340364421}
   m_Father: {fileID: 1684225809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
