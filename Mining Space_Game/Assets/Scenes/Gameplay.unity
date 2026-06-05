@@ -1149,7 +1149,7 @@ MonoBehaviour:
   tempoDelayBala: 0.5
   energiaNaveAtual: 0
   energiaGasta:
-  - 2
+  - 1
   - 0.5
   vidaNave: 30
   limitesCamPlayer:
